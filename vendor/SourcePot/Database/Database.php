@@ -13,10 +13,14 @@ class Database extends \PDO
     * and keeping them open for the duration of script execution
     */
    public static function pool(
-      string $username, string $password, string $dbname = '',
-      string $host = 'localhost', int $port = 3306
+      string $username, 
+      string $password, 
+      string $dbname = '',
+      string $host = 'localhost', 
+      int $port = 3306
    ): self
    {
+      // md5 isn't great, but it's "good enough" for a job like this
       $hash = md5($username.$password.$dbname.$host.$port);
       if( !isset(self::$connections[$hash]) )
       {

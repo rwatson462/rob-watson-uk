@@ -1,6 +1,7 @@
 # rob-watson-uk
 The code for my actual website at http://rob-watson.uk
-(yes, `http` because I'm too cheap to pay for SSL)
+(yes, `http`, because I'm too cheap to pay for SSL)
+
 
 ## Key features:
 
@@ -15,6 +16,7 @@ The code for my actual website at http://rob-watson.uk
 3. Simple
 > No autoloaders, no class heirarchy, just plain PHP code with minimal extra
   loaded in.
+
 
 ### Not included here:
 
