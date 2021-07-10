@@ -1,0 +1,12 @@
+
+RewriteEngine On
+
+# If the file exists, use it (e.g. css, js files)
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Forward all other requests to index.php
+RewriteRule ^(.*)$ /index.php [QSA,L]
+
+# This should never trigger as every request will redirect to index.php, 
+# but just in case, here it is
+ErrorDocument 404 /404.html
