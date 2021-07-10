@@ -34,14 +34,14 @@ class Database extends \PDO
       private int $port = 3306
    ) {
 
-      # Create database connection string
+      // Create database connection string
       $dsn = "mysql:host={$this->host};port={$this->port}";
       if( $this->dbname ) $dsn .= ";dbname={$this->dbname}";
 
-      # Initialise PDO and connect to database
+      // Initialise PDO and connect to database
       parent::__construct( $dsn, $this->username, $this->password );
 
-      # Set a handy default: automatically fetch stdclass objects
+      // Set a handy default: automatically fetch stdclass objects
       $this->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_OBJ);
    }
 

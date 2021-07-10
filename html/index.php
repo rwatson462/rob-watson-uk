@@ -47,12 +47,16 @@ if( $stmt->rowCount() === 0 )
    exit;
 }
 
-// get page record information, decode extra_json and assign to global variable
-// so we can use it in the templates
+/**
+ * Get page record information, decode extra_json and assign to global variable 
+ * so we can use it in the templates
+ */
 $pageData = $stmt->fetch();
 
-// wrap the inclusion in a function to preserve variable sope and have $data
-// automatically available in the template
+/**
+ * Wrap the inclusion in a function to preserve variable sope and have $data
+ * automatically available in the template
+ */
 function includeTemplate( string $templateFile, object $data )
 {
    include $templateFile;
